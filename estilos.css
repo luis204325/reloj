@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(wallpaper.jpg) #000;
+    background-size: cover;
+    color: #fff;
+    font-size: 16px;
+}
+
+.wrap{
+    width: 90%;
+    max-width: 1000px;
+   /* margin:auto;*/
+}
+
+.widget{
+    width: 40%;
+    margin: 2em;
+}
+
+.widget p{
+    display: inline-block;
+    line-height: 1em;
+}
+
+.fecha{
+    font-family: Oswald , Arial;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0.3125rem;
+    background: rgba(0,0, 0, .5);
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.reloj{
+
+    font-family: Oswald , Arial;
+    text-align: center;
+    font-size: 4em;
+    background: rgba(0,0, 0, .5);
+    padding: 20px;
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+.reloj .caja-segundos{
+    display: inline-block;
+}
+
+.reloj .segundos,
+.reloj .ampm {
+    font-size: 2rem;
+    display: block;
+}
+
+
+:root{
+    --color-bg-calendar:  rgba(0,0, 0, .5);
+    --color-cell:#e3e3e3;
+    --color-cell-disabled: #424649;
+
+}
+
+.root {
+    /*min-height: 100vh;*/
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24%; /*separacion lateral*/
+    height: 300px; /*separeacion vertical*/
+    max-width: 1000px;
+}
+.calendar{
+    padding: 20px 10px;
+    background-color: var(--color-bg-calendar);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    font-family: sans-serif;
+}
+
+
+.calendar_header{
+    color : white;
+    display: flex;
+    justify-content: space-between;/*justifica el contenido*/
+    text-transform: uppercase; /*Cambia el texto a mayusculas*/
+    margin-bottom: 30px;
+}
+
+.calendar .control{
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+    border: none; 
+    cursor: pointer; /*Tipo del cursor al pasar sobre el objeto*/
+    padding: 0 5px;
+}
+
+.grid_header, .grid_body{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid_header{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.grid_body{
+    grid-auto-rows: 40px;
+    color : var(--color-cell);
+}
+
+
+.grid__cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid__cell--gd{
+    cursor: pointer;
+}
+
+.grid__cell--selected{
+    color: var(--color-bg-calendar);
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--color-bg-calendar) inset;
+}
+
+
+
+.grid__cell--disable{
+    color: var(--color-cell-disabled);
+    cursor: not-allowed;
+}
+
+
+
